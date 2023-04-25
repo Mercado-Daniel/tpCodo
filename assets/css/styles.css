@@ -16,7 +16,6 @@ font-family: 'Khand', sans-serif;
 font-family: 'PT Sans Narrow', sans-serif;
 font-family: 'Roboto Condensed', sans-serif; */
 
-
 body {
     margin: 0;
 }
@@ -34,7 +33,7 @@ header {
 
 .nav1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-top: 10px;
     
@@ -124,8 +123,20 @@ header {
 
 main {
     background-color: ivory;
+    min-height: 62.99vh;
 }
+.main-index{
+    width: 100vw;
+    border: 5px solid black;
+    margin: auto;
+    display: grid;
+    grid-template: "title"
+                    "slider"
+                    "cats";
+    grid-template-columns: 12fr;
+    grid-template-rows: repeat(4, min-content);
 
+}
 
 
 footer {
@@ -184,4 +195,104 @@ footer {
 
 .ultimo {
     margin-top: -15px;
+}
+
+.title{
+    grid-area: title;
+    text-align: center;
+}
+.slid-img{
+    width: 80vw;
+    height: 40vh;
+}
+.slider-frame{
+    grid-area: slider;
+    width: 100%;
+    height: auto;
+    margin: 50px auto 0;
+    overflow: hidden;
+}
+.slider-frame ul{
+    display: flex;
+    justify-content: space-around;
+    padding: auto;
+    width: 300%;
+    animation: slide 15s infinite alternate ease-in-out;
+}
+
+.slider-frame li{
+    list-style: none;
+    width: 100%;
+}
+
+@keyframes slide {
+    0%{margin-left: 0%;}
+    30%{margin-left: 0%;}
+
+    35%{margin-left: -100%;}
+    65%{margin-left: -100%;}
+
+    70%{margin-left: -200%;}
+    100%{margin-left: -200%;}
+}
+
+.cats-container{
+    width: 90vw;
+    border: 5px solid aliceblue;
+    margin: auto;
+    display: grid;
+    grid-template: "cat-1"
+                    "cat-2"
+                    "cat-3";
+    grid-template-columns: 12fr;
+    grid-template-rows: repeat(3, min-content);
+    gap: 10vw 0;
+}
+
+.cat-1{
+    grid-area: cat-1;
+    display: grid;
+    grid-template:  "title"
+                    "card-principal"
+                    "card-second";
+    grid-template-columns: 12fr;
+    grid-template-rows: repeat(3, min-content);
+    margin: auto;
+}
+
+.title-cat{
+    grid-area: title;
+    text-align: center;
+}
+
+.card-principal{
+    grid-area: card-principal;
+    border: 5px solid black;
+    border-radius: 12px;
+    width: 320px;
+    height: 600px; 
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-img img{
+    max-width: 320px;
+}
+.card-second{
+    grid-area: card-second;
+    display: flex;
+    flex-direction: column;
+}
+.card-mini{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 320px;
+    margin: auto;
+}
+.card-mini > .card-img img{
+    max-width: 60px;
 }
