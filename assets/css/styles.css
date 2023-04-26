@@ -249,31 +249,12 @@ footer {
 
 .cats-container{
     width: 90vw;
-    border: 5px solid aliceblue;
     margin: auto;
-    display: grid;
-    grid-template: "cat-1"
-                    "cat-2";
-    grid-template-columns: 12fr;
-    grid-template-rows: repeat(2, 6fr);
-    gap: 10vw 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.cat{
-    background-color: #41729F;
-    grid-area: cat-1;
-    display: grid;
-    grid-template:  "title"
-                     ;
-    grid-template-columns: 12fr;
-    grid-template-rows: repeat(3, min-content);
-    margin: auto;
-}
-
-#cat-1 .title-cat{
-    grid-area: title;
-    text-align: center;
-}
 
 .card-principal{
     grid-area: section-products ;
@@ -295,7 +276,7 @@ footer {
     border-radius: 12px 12px 0 0;
 }
 
-.card-img img{
+.card-img > img{
     max-width: 320px;
     height: 250px;
     border-radius: 12px 12px 0 0;
@@ -319,6 +300,7 @@ footer {
     border: 0;
     font-size: 1rem;
 }
+
 
 @media (hover: hover){/*hace que solo se active el hover al detectar un cursor*/
     .card-principal:hover{
