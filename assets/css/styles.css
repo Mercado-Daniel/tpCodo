@@ -266,6 +266,7 @@ footer {
 }
 
 .card-principal{
+    background-color: #41729F;
     grid-area: card-principal;
     border: 5px solid black;
     border-radius: 12px;
@@ -275,7 +276,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
+
 .card-img img{
     max-width: 320px;
 }
@@ -285,6 +288,7 @@ footer {
     flex-direction: column;
 }
 .card-mini{
+    background-color: #41729F;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -295,4 +299,11 @@ footer {
 }
 .card-mini > .card-img img{
     max-width: 60px;
+}
+
+@media (hover: hover){
+    .card-principal:hover{
+        transform: scale(1.5);
+        background-color:#ccf1f7;
+    }
 }
