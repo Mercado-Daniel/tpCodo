@@ -141,18 +141,17 @@ main {
     min-height: 62.99vh;
 }
 .main-index{
-    width: 100vw;
-    margin: auto;
+    width: 100%;
+    
     display: grid;
-    grid-template: "title"
+    grid-template:
                     "slider"
                     "cats";
     grid-template-columns: 12fr;
-    grid-template-rows: repeat(3, min-content);
-
+    grid-template-rows: repeat(2, min-content);
 }
 .main-products{
-    width: 100vw;
+    width: 100%;
     margin: auto;
     display: grid;
     grid-template: "aside-products"
@@ -233,26 +232,31 @@ footer {
     grid-area: title;
     text-align: center;
 }
-.slid-img{
-    width: 80vw;
-    height: 40vh;
-}
-.slider-frame{
+.slider-container{
     grid-area: slider;
     width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.slider-frame{
+    width: 90vw;
     height: auto;
-    margin: 50px auto 0;
+    margin: auto;
     overflow: hidden;
 }
 .slider-frame ul{
     display: flex;
-    justify-content: space-around;
     padding: auto;
     width: 300%;
     animation: slide 15s infinite alternate ease-in-out;
 }
 
 .slider-frame li{
+    display: flex;
+    justify-content: space-around;
     list-style: none;
     width: 100%;
 }
@@ -272,15 +276,26 @@ footer {
     width: 90vw;
     margin: auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
 .card-principal{
-    grid-area: section-products ;
     border-radius: 12px;
     width: 320px;
+    margin: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.card-main{
+    border-radius: 12px;
+    width: 600px;
     margin: auto;
     margin-top: 12vw;
     margin-bottom: 12vw;
@@ -288,6 +303,27 @@ footer {
     flex-direction: column;
     align-items: center;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+}
+.card-img-m{
+    background-color: white;
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    border-radius: 12px 12px 0 0;
+}
+.card-img-m > img{
+    max-width: 600px;
+    height: 500px;
+    border-radius: 12px 12px 0 0;
+}
+.card-body-m{
+    width: 100%;
+    border-radius: 0 0 12px 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #41729F;
+    color: ivory;
 }
 .card-img{
     background-color: white;
@@ -314,12 +350,21 @@ footer {
 .cat-products{
     background-color:#41729F ;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
 }
 .cat-button{
     background-color: transparent;
     border: 0;
     font-size: 1rem;
+}
+#cards-container{
+    grid-area: section-products;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 100px 100px ;
+
 }
 
 
@@ -331,6 +376,13 @@ footer {
         background-color:#ccf1f7;
         color: #242323;
     }
+    .card-main:hover{
+        transform: scale(1.5);
+    }
+    .card-main:hover >.card-body-m{
+        background-color:#ccf1f7;
+        color: #242323;
+    }
 }
 @media screen and (max-width: 850px) {
     /* header {
@@ -339,7 +391,17 @@ footer {
         /* justify-content: space-between; */
         /* height: 120px; */
     /*} */
-
+    .card-main{
+        max-width: 320px;
+    }
+    .card-img-m > img{
+        max-width: 320px;
+        max-height: 250px;
+    }
+    .card-img-m{
+        width: 320px;
+        height: 250px;
+    }
     .nav1 {
         display: flex;
         flex-direction: row;
@@ -419,7 +481,17 @@ footer {
         flex-direction: column;
         justify-content: center;
     }
-
+    .card-main{
+        max-width: 300px;
+    }
+    .card-img-m > img{
+        max-width: 300px;
+        max-height: 250px;
+    }
+    .card-img-m{
+        width: 300px;
+        height: 250px;
+    }
       
     .logo {
         display: flex;
@@ -454,7 +526,7 @@ footer {
     }
 
     .user-nav2 a {
-        padding: 5px 20px;
+        padding: 5px;
         margin: 0;
     }
 
