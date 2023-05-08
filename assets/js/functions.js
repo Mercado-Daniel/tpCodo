@@ -11,9 +11,7 @@ function createCard(product){
 function createCards(products){
     let cards = "";
         for(let i=0; i<products.length; i++){
-            if(filtro(products[i])){
                 cards += createCard(products[i]);
-            }
     }
     return cards;
 }
@@ -21,11 +19,17 @@ function showCards(cardsFilters){//muestra las cards
     const cardsContainer = document.getElementById("cards-container");
     cardsContainer.innerHTML = cardsFilters;
 }
-function filtro(product){
-    if((product.category == "smartphones") || (product.category ==  "laptops")){
-        return true;
+function filterAll(product){
+        const laptopsSmartphones = product.filter(function(producto) {
+        return producto.category === "laptops" || producto.category === "smartphones";
+        });
+        return laptopsSmartphones;
     }
-    return false;
+function productFilter(categoryF, product){
+    const productf = product.filter(function(pro){
+        return pro.category === categoryF;
+    });
+    return productf;
 }
 
-export {createCards, showCards};
+export {createCards, showCards, filterAll, productFilter};

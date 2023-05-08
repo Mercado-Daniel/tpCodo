@@ -138,7 +138,7 @@ header {
 
 main {
     background-color: ivory;
-    min-height: 62.99vh;
+    min-height: 65vh;
 }
 .main-index{
     width: 100%;
@@ -249,7 +249,8 @@ footer {
 }
 .slider-frame ul{
     display: flex;
-    padding: auto;
+    justify-content: center;
+    padding: 0;
     width: 300%;
     animation: slide 15s infinite alternate ease-in-out;
 }
@@ -357,6 +358,11 @@ footer {
     background-color: transparent;
     border: 0;
     font-size: 1rem;
+    color: ivory;
+}
+.cat-button:active{
+    background-color: ivory;
+    color: #41729F;
 }
 #cards-container{
     grid-area: section-products;
@@ -382,6 +388,9 @@ footer {
     .card-main:hover >.card-body-m{
         background-color:#ccf1f7;
         color: #242323;
+    }
+    .cat-button{
+        cursor: pointer;
     }
 }
 @media screen and (max-width: 850px) {
@@ -536,6 +545,17 @@ footer {
 
     #footer3 span {
         padding-right: 30px;
+    }
+    .card-main{
+        max-width: 310px;
+    }
+    .card-img-m > img{
+        max-width: 310px;
+        max-height: 250px;
+    }
+    .card-img-m{
+        width: 310px;
+        height: 250px;
     }
 }
 
