@@ -23,7 +23,7 @@
                 <button type="submit"><img src="./assets/images/busqueda-de-lupa.png" alt="busqueda" class="boton"></button>
             </div>
             <div class="user-nav">
-                <button id="login" class="btnLogin">Iniciar Sesión</button>
+                <!-- <button id="logout" class="btnLogout">Logout</button> -->
                 <a href="#"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i></a>
             </div>            
         </nav>
@@ -34,10 +34,42 @@
                 <a href="./nosotros.html" class="nosotros">Nosotros</a>
                 <a href="./contacto.html" class="contacto">Contacto</a>
             </div>
-        </nav>     
+        </nav>            
     </header>
-    <main class="mainIndex">
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <main class="loginRegister">
+        <div class="wrapper">
+            <span class="icon-close">
+                <i class="fa-solid fa-xmark"></i>
+            </span>
+            <div class="form-box login">
+                <h2>Login</h2>
+                <form action="#" id="loginForm">
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <input type="email" id="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <input type="password" id="password" required>
+                        <label>Password</label>
+                    </div>
+                    <div class="remember-forgot">
+                        <label><input type="checkbox" name="rememberme" id="rememberme">Remember me</label>
+                        <a href="#">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                    <div class="login-register">
+                        <p>Don't have an account? <a href="./registro.html" class="register-link">Register</a>
+                        </p>
+                    </div>
+                </form>
+            </div>        
+        </div>
     </main>
     <footer>
         <div id="footer1">
@@ -57,7 +89,8 @@
             <p>Copyright © 2023, HighTechZone.com</p>
             <p class="ultimo">Buenos Aires, Argentina</p>
         </div>
+
     </footer>
-    <script src="./assets/js/main.js"></script>    
+    <script src="./assets/js/login.js"></script>
 </body>
 </html>
