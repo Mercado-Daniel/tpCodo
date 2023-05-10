@@ -37,46 +37,55 @@
         </nav>     
     </header>
     
-    <main class="main-index mainIndex" >
+    <main class="mainIndex" >
         <div class="titlem">
             <h2 class="h2-title">HOME</h2>
         </div>
-        <section class="slider-container"> 
+        <aside class="slider-container"> 
             <div class="slider-frame">
                 <ul>
                     <li>
-                        <a href="">
-                            <div class="card-main">
-                                <div class="card-img-m"><img  src="./assets/images/smartphones.jpg" alt=""></div>
-                                <div class="card-body-m">
-                                    <div class="card-title">Smartphones</div>
-                                </div>
-                            </div>
-                        </a>
+                        <div class="slider1"></div>
                     </li>
                     <li>
-                        <a href="./products.html">
-                            <div class="card-main">
-                                <div class="card-img-m"><img  src="./assets/images/slide-2.jpg" alt=""></div>
-                                <div class="card-body-m">
-                                    <div class="card-title">Todos los productos</div>
-                                </div>
-                            </div>
-                        </a>
+                        <div class="slider2"></div>
                     </li>
                     <li>
-                        <a href="">
-                            <div class="card-main">
-                                <div class="card-img-m"><img  src="./assets/images/laptops.jpg" alt=""></div>
-                                <div class="card-body-m">
-                                    <div class="card-title">Laptops</div>
-                                </div>
-                            </div>
-                        </a>
+                        <div class="slider3"></div>
                     </li>
                 </ul>
             </div>
-        </section>
+        </aside>
+        <section class="cats-section">
+            <button  id="smart-link">
+                <div class="card-main">
+                    <div class="card-img-m"><img  src="./assets/images/smartphones.jpg" alt=""></div>
+                    <div class="card-body-m">
+                        <div class="card-title">Smartphones</div>
+                    </div>
+                </div>
+            </button>
+            <a href="./products.html">
+                <div class="card-main">
+                    <div class="card-img-m"><img  src="./assets/images/slide-2.jpg" alt=""></div>
+                    <div class="card-body-m">
+                        <div class="card-title">Todos los productos</div>
+                    </div>
+                </div>
+            </a>
+            <button id="laptops-link">
+                <div class="card-main">
+                    <div class="card-img-m"><img  src="./assets/images/laptops.jpg" alt=""></div>
+                    <div class="card-body-m">
+                        <div class="card-title">Laptops</div>
+                    </div>
+                </div>
+            </button>
+        </section >
+        <aside id="cards-container">
+
+        </aside>
+    </main>
     <footer>
         <div id="footer1">
             <a class="volver1" href="#arriba">Volver al inicio</a>            
@@ -96,7 +105,8 @@
             <p class="ultimo">Buenos Aires, Argentina</p>
         </div>
     </footer>
-    <script type="module" src="/assets/assets/js/index.js"></script>
+    <script type="module" src="/assets/js/index.js"></script>
     <script type="module" src="/assets/js/functions.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

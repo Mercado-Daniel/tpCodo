@@ -15,29 +15,26 @@
 <body>
     <header>
         <nav class="nav1">
-            <div class="logo">
+            <div id="arriba" class="logo">
                 <a href="./index.html"><img class="logo1" src="./assets/images/LogoTP.png" alt="logo"></a>
             </div>
             <div class="search-bar">
-              <input type="text" placeholder="Buscar...">
-              <button type="submit"><img src="./assets/images/busqueda-de-lupa.png" alt="busqueda" class="boton"></button>
-
+                <input type="text" placeholder="Buscar...">
+                <button type="submit"><img src="./assets/images/busqueda-de-lupa.png" alt="busqueda" class="boton"></button>
             </div>
             <div class="user-nav">
-              <a href="#">Iniciar sesión</a>
-              <a href="#"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i></a>
-            </div>
-            
+                <button id="login" class="btnLogin">Iniciar Sesión</button>
+                <a href="#"><i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"></i></a>
+            </div>            
         </nav>
         <nav class="nav2">
             <div class="user-nav2">
-
-                <a href="./index.html"><i class="fa-solid fa-house fa-lg" style="color: #000000;"></i></a>
-                <a href="#">Productos</a>
-                <a href="./nosotros.html">Nosotros</a>
-                <a href="./contacto.html">Contacto</a>
+                <a href="./index.html" class="home"><i class="fa-solid fa-house fa-lg" style="color: #000000;"></i></a>
+                <a href="#" class="productos">Productos</a>
+                <a href="./nosotros.html" class="nosotros">Nosotros</a>
+                <a href="./contacto.html" class="contacto">Contacto</a>
             </div>
-        </nav>
+        </nav>     
     </header>
     <main class="main-products mainIndex">
         <div class="tit">
@@ -74,5 +71,6 @@
 
     <script type="module" src="/assets/js/products.js"></script>
     <script type="module" src="/assets/js/functions.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

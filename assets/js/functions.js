@@ -1,11 +1,12 @@
 function createCard(product){
-    return `<div class="card-principal">
+    return `<a href="#"><div class="card-principal">
     <div class="card-img"><img src="${product.images[0]}" alt=""></div>
     <div class="card-body">
         <div class="card-title">${product.title}</div>
         <div class="card-price">precio: $${product.price}</div>
     </div>
-</div>`;
+    </div>
+    </a>`;
     
 }
 function createCards(products){

@@ -28,8 +28,6 @@ async function productData(){
                 cards = createCards(cardsFilter);
                 showCards(cards);
             });
-            
-
         });
 }
 productData();
