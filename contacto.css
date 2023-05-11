@@ -16,7 +16,6 @@ font-family: 'Khand', sans-serif;
 font-family: 'PT Sans Narrow', sans-serif;
 font-family: 'Roboto Condensed', sans-serif; */
 
-
 body {
     /* margin: 10 px; */
     margin: 0;
@@ -31,14 +30,14 @@ header {
     /* background-color: #274472; */
     /* height: 15vh; */
     background-color: rgb(0, 0, 0);
-    padding: 10px;
+    /* padding: 10px; */
     font-family: 'Roboto Condensed', sans-serif;
-
+    
 }
 
 .nav1 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px 20px;
     
@@ -52,7 +51,7 @@ header {
     /* background-color: black; */
     /* background-color:#5885AF; */
     height: auto;
-    margin: 10px -10px;     
+    margin: 0;     
 }
 
 .logo {
@@ -137,6 +136,170 @@ header {
     font-weight: bold;
 }
 
+/* FORMULARIO */
+
+.main-container {
+    height: 80vh; 
+    width: 100%;
+    background-image: url(/img/regalos-navidad.jpg);
+    background-size: cover; 
+    background-position: 0 32%; 
+    display: flex;
+} 
+
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+/* SECCIÓN IZQUIERDA */
+
+.contactamos-formulario {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+} 
+
+.contenedor-texto {
+    margin-bottom: 8rem; 
+    width: 80%;
+} 
+
+.contactamos-formulario h2 {
+    color: #bae6ee;
+    font-size: 5rem;
+    text-align: center;
+} 
+
+.contactamos-formulario p {
+    font-size: 1.5rem;
+    color: #bae6ee;
+    text-align: center;
+}   
+
+
+/* SECCIÓN DERECHA */
+
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-contenedor {
+    width: 42%;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contenedor h3 {
+    font-size: 3.3rem;
+    color: #a1d5d5; 
+    margin: 1rem 0 1.5rem 15%; 
+} 
+
+.formulario {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario *:focus {
+    outline: none;
+    border-bottom: 0.1rem solid black; 
+}  
+
+.mensaje {
+    font-size: 1.4rem;
+    margin-bottom: 1rem; 
+    border: none;
+    border-bottom: 1px solid rgb(183, 183, 183);
+    width: 70%;
+    margin-left: 0.9rem;
+    height: 8rem;
+}
+
+.form-contenedor .formulario .enviar-mensaje {
+    background-color: #C3E0E5; 
+    border-radius: 0.3rem; 
+    border: none;
+    font-size: 1.29rem;
+    height: 2.5rem;
+    width: 72%;
+    margin: 0.4rem 0 2rem 0.6rem;    
+}
+
+.formulario .enviar-mensaje:hover {
+    cursor: pointer; 
+    background-color: #a1d5d5;
+}
+
+.form-control input{
+    border: none;
+    display: block;
+    font-family: inherit;
+    font-size: 1.3rem;
+    padding: 0.3rem; 
+    border-bottom: 1px solid rgb(183, 183, 183);
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.form-control {
+    position: relative;
+    width: 69%;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 12%;
+    right: -3%;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+    font-size: 1.2rem;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+    font-size: 1.2rem;
+}
+
+.form-control small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+
+}    
+
+.form-control.error small {
+    visibility: visible;
+    font-size: 1.1rem;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
+
 footer {
     padding: 10px;
     height: 170px;
@@ -161,13 +324,14 @@ footer {
     height: 19px;
 }
 
+
 #footer2 {
     display: flex;
     justify-content: space-evenly;
     padding: 10px;
     /* margin-left: -107px; */
     /* margin: 0 -8vw; */
-    color: white;      
+    color: white;    
 }
 
 #footer2 a {
@@ -203,82 +367,10 @@ footer {
     margin-top: -15px;
 }
 
-@media screen and (max-width: 480px) {
-    /* .nav2 {
-        padding: 5px 20px;
-        background-color: aqua;  
-    }
-    
-    .user-nav2 a {
-        display: flex;
-        flex-direction: column;
-        width: 60px;
-    } */
-
-    main {
-    background-color: rgb(238, 14, 103);
-    }
-
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-
-    .logo {
-        display: flex;
-        align-items: center;
-        width: 300px;
-    }
-
-    .logo1 {
-        /* width: 300px; */
-        width: 50vw;
-    }
-
-    .search-bar {
-        margin-top: 5px;
-        margin-left: 20px;
-        display: flex;
-        justify-content: center;
-        width: 300px;
-    }
-
-    .user-nav {
-        display: flex;
-        justify-content: center;
-    }
-
-    .user-nav a {
-        margin-top: 10px;
-    }
-    
-    .nav2 {
-        margin: 0 -10px;
-    }
-
-    .user-nav2 a {
-        padding: 5px 20px;
-        margin: 0;
-    }
-
-    #footer2 a {
-        padding: 5px 30px;
-    }
-
-    #footer3 span {
-        padding-right: 30px;
-    }
-
-        /* RESPONSIVE FORMULARIO 450px */
-
-    .form .form-contenedor h3 {
-        font-size: 2rem;
-    }
+.title{
+    grid-area: title;
+    text-align: center;
 }
-
-
 
 @media screen and (max-width: 850px) {
     /* header {
@@ -287,7 +379,7 @@ footer {
         /* justify-content: space-between; */
         /* height: 120px; */
     /*} */
-
+    
     .nav1 {
         display: flex;
         flex-direction: row;
@@ -339,18 +431,14 @@ footer {
         padding: 5px 30px;
     }
 
-    main {
-        background-color: rgb(42, 165, 73);
-    }
+
 
     #footer2 {
         /* margin-left: 0 */
         justify-content: space-around;
     }
 
-    /* RESPONSIVE FORMULARIO 850px */
-
-    .root .main-container {
+    .main-container {
         width: 100%;
         background-position: 60% 50%; 
     }
@@ -375,147 +463,165 @@ footer {
         flex-direction: column;
     }
 
+    /* FORMULARIO RESPONSIVE */
+
+    body .main-container {
+        height: 100vh;
+    }  
+
+    .form .form-contenedor {
+        width: 65%;
+    }
+
+    .form .form-contenedor h3 {
+        font-size: 3.5rem;
+        margin: 1rem 0 3rem 15%;
+    }  
+
+    form .form-control input{
+        font-size: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form .formulario .enviar-mensaje {
+        min-height: 8%; 
+        font-size: 2rem;
+    }
+
+    .form-control {
+        margin-bottom: 3rem;
+    }
+
+    .form-control.success i.fa-check-circle {
+
+        font-size: 1.7rem;
+    }
+    
+    .form-control.error i.fa-exclamation-circle {
+
+        font-size: 1.7rem;
+    }
+
+    .form .formulario .form-control small {
+        font-size: 1.53rem;
+    }
+
+    .formulario .mensaje {
+        height: 16rem;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
 }
 
-/* Contenedor general */
+@media screen and (max-width: 480px) {
+    /* .nav2 {
+        padding: 5px 20px;
+        background-color: aqua;  
+    }
+    
+    .user-nav2 a {
+        display: flex;
+        flex-direction: column;
+        width: 60px;
+    } */
 
-#root {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100vw;
-    height: 100vh;
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        width: 300px;
+    }
+
+    .logo1 {
+        /* width: 300px; */
+        width: 50vw;
+    }
+
+    .search-bar {
+        margin-top: 5px;
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        width: 300px;
+    }
+
+    .user-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .user-nav a {
+        margin-top: 10px;
+    }
+    
+    .nav2 {
+        margin: 0;
+    }
+
+    .user-nav2 a {
+        padding: 5px;
+        margin: 0;
+    }
+
+    #footer2 a {
+        padding: 5px 30px;
+    }
+
+    #footer3 span {
+        padding-right: 30px;
+    }
+
+    /* RESPONSIVE FORMULARIO */
+
+    body .main-container {
+        height: 100vh;
+    } 
+
+    .form .form-contenedor {
+        width: 70%;
+    }
+
+    .form .form-contenedor h3 {
+        font-size: 2.2rem;
+        color: #a1d5d5; 
+        margin: 1rem 0 1.5rem 15%;
+    } 
+
+    .form .form-control input{
+        font-size: 1.2rem;
+        margin-bottom: 2rem; 
+    }
+
+    .form-contenedor .mensaje {
+        font-size: 1.15rem;
+        margin-bottom: 1rem;
+        height: 6rem;
+    }
+    
+    .form .formulario .enviar-mensaje { 
+        font-size: 1rem;
+    }
+
+    .form-control.success i.fa-check-circle {
+
+        font-size: 1rem;
+    }
+    
+    .form-control.error i.fa-exclamation-circle {
+
+        font-size: 1rem;
+    }
+
+    .form .formulario .form-control small {
+        font-size: 1rem;
+    }   
+
+    .form-control {
+        margin-bottom: 0.5rem;
+    }
 }
-
-/* FONDO */
-
-
-.main-container {
-    height: 100%;
-    width: 100%;
-    background-image: url(/img/regalos-navidad.jpg);
-    background-size: cover;
-    background-position: 0 32%; 
-    display: flex;
-} 
-
-.opacity {
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 99;
-    height: 100%;
-    width: 100%;
-    display: flex;
-} 
-
-
-/* SECCIÓN IZQUIERDA */
-
-.contactamos-formulario {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-} 
-
-.contenedor-texto {
-    margin-bottom: 8rem; 
-    width: 80%;
-} 
-
-.contactamos-formulario h2 {
-    color: #bae6ee;
-    font-size: 5rem;
-    text-align: center;
-} 
-
-.contactamos-formulario p {
-    font-size: 1.5rem;
-    color: #bae6ee;
-    text-align: center;
-}  
-
-/* SECCIÓN DERECHA */
-
-.form {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 50%;
-} 
-
-.form-contenedor {
-    width: 45%;
-    height: 85%;
-    background-color: white;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column;
-}
-
-.form-contenedor h3 {
-    margin: 0;
-    font-size: 3.3rem;
-    color: #a1d5d5; 
-    margin: 1rem 0 1.5rem 10%; 
-} 
-
-.formulario { 
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.formulario > * {
-    box-sizing: border-box;
-    border: none;
-    font-size: 1.3rem;
-    padding: 0.3rem; 
-    border-bottom: 1px solid rgb(183, 183, 183);
-    margin-bottom: 2rem;
-    width: 80%;
-}
-
-.formulario *:focus {
-    outline: none;
-    border-bottom: 0.1rem solid black; 
-}  
-
-.mensaje {
-    min-height: 30%;
-    font-size: 1.4rem;
-    margin-bottom: 1rem;
-}
-
-.formulario .enviar-mensaje {
-    background-color: #C3E0E5; 
-    border-radius: 0.3rem; 
-    border: none;
-    min-height: 12%;
-}
-
-.enviar-mensaje:hover {
-    cursor: pointer; 
-    background-color: #a1d5d5;
-}
-
-.enviar-mensaje:focus {
-    outline: none;
-}    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
