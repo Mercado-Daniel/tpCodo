@@ -28,8 +28,7 @@ a{
 }
 .nav1 {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-around;
     padding: 10px 20px;    
 }
 .nav2 {
@@ -55,6 +54,11 @@ a{
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 0 10px;
+}
+.bar-se{
+    grid-area: search-bar;
+    display: flex;
+    justify-content: space-around;
 }
 .search-bar {
     display: flex;
@@ -149,9 +153,10 @@ a{
     margin: auto;
     display: grid;
     grid-template: "aside-products"
+                    "search-bar"
                     "section-products";
     grid-template-columns: 12fr;
-    grid-template-rows: repeat(2, min-content);
+    grid-template-rows: repeat(3, min-content);
 
 }
 .user-nav2 a:hover {
