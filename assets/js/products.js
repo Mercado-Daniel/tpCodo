@@ -1,7 +1,9 @@
-import {createCards, showCards, filterAll, productFilter} from "./functions.js";
+import {createCards, showCards, filterAll, productFilter, textFilter} from "./functions.js";
 const smartphones = document.getElementById('smart');
 const laptops = document.getElementById('laptops');
 const all = document.getElementById('all');
+const textInput = document.getElementById('text-input');
+const buttonInput = document.getElementById('button-input');
 let urlProd = "https://dummyjson.com/products";
 
 async function productData(){
@@ -27,6 +29,10 @@ async function productData(){
                 cardsFilter = filterAll(data.products);
                 cards = createCards(cardsFilter);
                 showCards(cards);
+            });
+            console.log(cards);
+            buttonInput.addEventListener('click', function(){
+                textFilter(cardsFilter, textInput);
             });
         });
 }
