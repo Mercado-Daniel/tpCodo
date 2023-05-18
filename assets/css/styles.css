@@ -26,6 +26,9 @@ a{
     text-decoration: none;
     margin: 12px;
 }
+iframe{
+    border-radius: 12px;
+}
 .nav1 {
     display: flex;
     justify-content: space-around;
@@ -222,6 +225,9 @@ main {
     font-weight: bold;
 }
 .container-contacto {
+    background-color: #fefefe;
+    border: solid;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -844,4 +850,167 @@ footer {
     }
 }
 
+/* FORMULARIO */
+
+.main-container {
+    height: 80vh; 
+    width: 100%;
+    background-image: url(/img/regalos-navidad.jpg);
+    background-size: cover; 
+    background-position: 0 32%; 
+    display: flex;
+} 
+
+.opacity {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: auto;
+    width: 100%;
+    display: flex;
+}
+
+/* SECCIÓN IZQUIERDA */
+
+.contactamos-formulario {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+} 
+
+.contenedor-texto {
+    margin-bottom: 8rem; 
+    width: 80%;
+} 
+
+.contactamos-formulario h2 {
+    color: #bae6ee;
+    font-size: 5rem;
+    text-align: center;
+} 
+
+.contactamos-formulario p {
+    font-size: 1.5rem;
+    color: #bae6ee;
+    text-align: center;
+}   
+
+
+/* SECCIÓN DERECHA */
+
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-contenedor {
+    width: 42%;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-contenedor h3 {
+    font-size: 3.3rem;
+    color: #a1d5d5; 
+    margin: 1rem 0 1.5rem 15%; 
+} 
+
+.formulario {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario *:focus {
+    outline: none;
+    border-bottom: 0.1rem solid black; 
+}  
+
+.mensaje {
+    font-size: 1.4rem;
+    margin-bottom: 1rem; 
+    border: none;
+    border-bottom: 1px solid rgb(183, 183, 183);
+    width: 70%;
+    margin-left: 0.9rem;
+    height: 8rem;
+}
+
+.form-contenedor .formulario .enviar-mensaje {
+    background-color: #C3E0E5; 
+    border-radius: 0.3rem; 
+    border: none;
+    font-size: 1.29rem;
+    height: 2.5rem;
+    width: 72%;
+    margin: 0.4rem 0 2rem 0.6rem;    
+}
+
+.formulario .enviar-mensaje:hover {
+    cursor: pointer; 
+    background-color: #a1d5d5;
+}
+
+.form-control input{
+    border: none;
+    display: block;
+    font-family: inherit;
+    font-size: 1.3rem;
+    padding: 0.3rem; 
+    border-bottom: 1px solid rgb(183, 183, 183);
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+.form-control {
+    position: relative;
+    width: 69%;
+}
+
+.form-control.success input {
+    border-color: #2ecc71;
+}
+
+.form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 12%;
+    right: -3%;
+}
+
+.form-control.success i.fa-check-circle {
+    color: #2ecc71;
+    visibility: visible;
+    font-size: 1.2rem;
+}
+
+.form-control.error i.fa-exclamation-circle {
+    color: #e74c3c;
+    visibility: visible;
+    font-size: 1.2rem;
+}
+
+.form-control small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+
+}    
+
+.form-control.error small {
+    visibility: visible;
+    font-size: 1.1rem;
+}
+
+.form-control.error input {
+    border-color: #e74c3c;
+}
 
