@@ -1,4 +1,6 @@
-const productContainer = document.getElementById ('product-details');
+
+let productContainer = document.getElementById ('product-details');
+const numerito = document.getElementById ('litle-number');
 const queryString = location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
@@ -13,6 +15,10 @@ async function create(){
             const sliderProduct1 = document.getElementById ('sliderproduct1');
             const sliderProduct2 = document.getElementById ('sliderproduct2');
             const sliderProduct3 = document.getElementById ('sliderproduct3');
+            const button = document.getElementById ('boton-agregar');
+            button.addEventListener ('click', function(){
+                agregarAlCarrito(productD);
+            });
             backgroundImages(sliderProduct1, productD.images[0]);
             console.log(productD.images.length);
             if(productD.images.length > 1){
@@ -70,7 +76,7 @@ function paintDetails(product, productContainer){
     <button class="btnLogin" onclick="history.back()">Atras</button>
     </div>
     <div>
-    <button class="btnLogin" onclick="history.back()">Añadir al Carrito</button>
+    <button id="boton-agregar" class="btnLogin">Añadir al Carrito</button>
     </div>
     `;
     productContainer.innerHTML = detail;
@@ -80,4 +86,31 @@ function backgroundImages(slide, product){
     slide.style.backgroundImage = `url("${product}")`;
     console.log(`url("${product}")`);
     
+}
+let productosEnCarrito;
+let productosEnCarritoLs = localStorage.getItem("productos-En-Carrito");
+if(productosEnCarritoLs){
+    productosEnCarrito = JSON.parse(productosEnCarritoLs);
+    actualizarNumerito();
+}else{
+    productosEnCarrito = [];
+}
+
+function agregarAlCarrito(productD){
+    let productoA = productD;
+    if(productosEnCarrito.some(producto => producto.id == productD.id)){
+        const index = productosEnCarrito.findIndex(producto => producto.id === productD.id);
+        productosEnCarrito[index].cantidad++;
+    }else{
+        productoA.cantidad = 1;
+        productosEnCarrito.push(productoA);
+    }
+    actualizarNumerito();
+
+    localStorage.setItem("productos-En-Carrito",JSON.stringify(productosEnCarrito));
+}
+
+function actualizarNumerito(){
+    let nuevoNumerito = productosEnCarrito.reduce((acc, product) => acc + product.cantidad, 0);
+    numerito.innerText = nuevoNumerito;
 }
