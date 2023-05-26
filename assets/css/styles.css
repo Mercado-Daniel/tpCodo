@@ -102,8 +102,7 @@ iframe{
     padding: 0;
 }
 .btnLogin {
-    width: 120px;
-    height: 30px;    
+    width: 120px;   
     background: black;
     border: 1px solid #fff;
     outline: none;
@@ -1100,4 +1099,31 @@ footer {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     border-radius: 12px;
+}
+
+.card-carrito{
+    border: solid;
+    border-radius: 12px;
+    padding: 12px;
+    max-height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.card-img-carrito{
+    width: 100px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin-right: 12px;
+}
+.card-img-carrito > img{
+    max-height: 60px;
+}
+.card-body-carrito{
+    display: flex;
+    border: solid;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
 }

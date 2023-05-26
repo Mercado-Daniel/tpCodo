@@ -114,3 +114,5 @@ function actualizarNumerito(){
     let nuevoNumerito = productosEnCarrito.reduce((acc, product) => acc + product.cantidad, 0);
     numerito.innerText = nuevoNumerito;
 }
+
+export {actualizarNumerito};
