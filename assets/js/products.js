@@ -10,8 +10,6 @@ async function productData(){
     await fetch(urlProd)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            //if(data.products.category == "smartphones" || if(data.products.category ==  "laptops"){}
             let cardsFilter = filterAll(data.products);
             let cards = createCards(cardsFilter);
             showCards(cards);
@@ -31,9 +29,9 @@ async function productData(){
                 showCards(cards);
             });
             console.log(cards);
-            buttonInput.addEventListener('click', function(){
-                textFilter(cardsFilter, textInput);
+            buttonInput.addEventListener('click', function(){//le da funcionalidad al boton de la barra de busqueda
+                textFilter(cardsFilter, textInput);//llama a la barra de busqueda para que efectue el filtro en base al nombre del producto
             });
         });
 }
-productData();
+productData();//llama a los productos desde la api

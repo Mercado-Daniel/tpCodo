@@ -12,11 +12,11 @@ async function create(){
         .then(data =>{
             const productD = data.products.find(product => product.id == id);
             paintDetails(productD, productContainer);
-            const sliderProduct1 = document.getElementById ('sliderproduct1');
+            const sliderProduct1 = document.getElementById ('sliderproduct1');//agrego las imagenes del producto al slider
             const sliderProduct2 = document.getElementById ('sliderproduct2');
             const sliderProduct3 = document.getElementById ('sliderproduct3');
             const button = document.getElementById ('boton-agregar');
-            button.addEventListener ('click', function(){
+            button.addEventListener ('click', function(){//agrega el producto al carrito
                 agregarAlCarrito(productD);
             });
             backgroundImages(sliderProduct1, productD.images[0]);
@@ -96,7 +96,7 @@ if(productosEnCarritoLs){
     productosEnCarrito = [];
 }
 
-function agregarAlCarrito(productD){
+function agregarAlCarrito(productD){//usa local storage para almacenar los productos del carrito en un array y modifica la cantidad de productos
     let productoA = productD;
     if(productosEnCarrito.some(producto => producto.id == productD.id)){
         const index = productosEnCarrito.findIndex(producto => producto.id === productD.id);

@@ -696,7 +696,13 @@ footer {
     margin: auto ;
 
 }
-@media (hover: hover){/*hace que solo se active el hover al detectar un cursor*/
+.cat-button{
+    cursor: pointer;
+}
+#smart-link ,#laptops-link{
+    cursor: pointer;
+}
+@media screen and (min-width: 850px){
     .card-principal:hover{
         transform: scale(1.5);
     }
@@ -711,12 +717,7 @@ footer {
         background-color:#ccf1f7;
         color: #242323;
     }
-    .cat-button{
-        cursor: pointer;
-    }
-    #smart-link ,#laptops-link{
-        cursor: pointer;
-    }
+    
 }
 @media screen and (max-width: 850px) {    
     .card-main{
@@ -1126,4 +1127,10 @@ footer {
     width: 80%;
     align-items: center;
     justify-content: space-between;
+}
+
+.total-carrito{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }

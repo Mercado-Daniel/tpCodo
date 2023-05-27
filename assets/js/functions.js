@@ -1,4 +1,4 @@
-function createCard(product){
+function createCard(product){//crea una tarjeta de producto
     return `<a href="./details.html?id=${product.id}"><div class="card-principal">
     <div class="card-img"><img src="${product.images[0]}" alt=""></div>
     <div class="card-body">
@@ -11,35 +11,35 @@ function createCard(product){
 }
 function createCards(products){
     let cards = "";
-        for(let i=0; i<products.length; i++){
-                cards += createCard(products[i]);
+        for(let i=0; i<products.length; i++){//recorre el array de productos 
+                cards += createCard(products[i]);//crea las tarjetas de cada producto en el array de productos y rellena el string con el html de cada producto
     }
-    return cards;
+    return cards;//devuelve un string con todas las tarjetas de producto
 }
-function showCards(cardsFilters){//muestra las cards
+function showCards(cardsFilters){//muestra las tarjetas de producto
     const cardsContainer = document.getElementById("cards-container");
     cardsContainer.innerHTML = cardsFilters;
     
 }
-function filterAll(product){
+function filterAll(product){//filtra los productos disponibles
         const laptopsSmartphones = product.filter(function(producto) {
         return producto.category === "laptops" || producto.category === "smartphones";
         });
         return laptopsSmartphones;
     }
-function productFilter(categoryF, product){
+function productFilter(categoryF, product){//filtra los productos en base a una categoria
     const productf = product.filter(function(pro){
         return pro.category === categoryF;
     });
     return productf;
 }
-function textFilter(products, input){
-        let productT = products.filter(product => product.title.toLowerCase().includes(input.value.toLowerCase()));
-        let card = createCards(productT);
+function textFilter(products, input){//le da funcionalidad a la barra de busqueda
+        let productT = products.filter(product => product.title.toLowerCase().includes(input.value.toLowerCase()));//filtra los productos por texto
+        let card = createCards(productT);//envia los productos que cumplen la condicion para crear las tarjetas
         if(card == ""){
-            showCards("<h2>Lo sentimos no contamos con ese producto aun</h2>");
+            showCards("<h2>Lo sentimos no contamos con ese producto aun</h2>");//en caso de que no se encuentre el producto se imprime el h2
         }else{
-            showCards(card);
+            showCards(card);//se muestran las tarjetas
         }
 }
 
