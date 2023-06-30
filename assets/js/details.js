@@ -4,13 +4,13 @@ const numerito = document.getElementById ('litle-number');
 const queryString = location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-let urlProd = "https://dummyjson.com/products";
+let urlProd = "https://acuastel.pythonanywhere.com/products";
 
 async function create(){
     await fetch(urlProd)
         .then(response => response.json())
         .then(data =>{
-            const productD = data.products.find(product => product.id == id);
+            const productD = data.find(product => product.id == id);
             paintDetails(productD, productContainer);
             const sliderProduct1 = document.getElementById ('sliderproduct1');//agrego las imagenes del producto al slider
             const sliderProduct2 = document.getElementById ('sliderproduct2');
@@ -19,18 +19,9 @@ async function create(){
             button.addEventListener ('click', function(){//agrega el producto al carrito
                 agregarAlCarrito(productD);
             });
-            backgroundImages(sliderProduct1, productD.images[0]);
-            console.log(productD.images.length);
-            if(productD.images.length > 1){
-                backgroundImages(sliderProduct2, productD.images[1]);
-                backgroundImages(sliderProduct3, productD.images[2]);
-            }else{
-                backgroundImages(sliderProduct2, productD.images[0]);
-                backgroundImages(sliderProduct3, productD.images[0]);
-            }
-            
-            
-            
+            backgroundImages(sliderProduct1, productD.imagen1);
+            backgroundImages(sliderProduct2, productD.imagen2);
+            backgroundImages(sliderProduct3, productD.imagen3);
     });
 }
 create();
@@ -63,10 +54,10 @@ function paintDetails(product, productContainer){
         <p>Marca del producto: ${product.brand}</p>
     </div>
     <div class="description-detail">
-        <p>Descriccion: ${product.description}</p>
+        <p>Descripcion: ${product.description}</p>
     </div>
     <div class="rating-detail">
-        <p>Calificacion: ${product.rating}</p>
+        <p>Stock: ${product.stock}</p>
     </div>
     <div class="price">
     <p>Precio: $${product.price}</p>

@@ -21,7 +21,7 @@ if(productoEnCarrito){
 
 function createCardCarrito(product){
     return `<div class="card-carrito">
-    <div class="card-img-carrito"><img src="${product.images[0]}" alt=""></div>
+    <div class="card-img-carrito"><img src="${product.imagen1}" alt=""></div>
     <div class="card-body-carrito">
         <div class="card-title-carrito">${product.title}</div>
         <div class="card-price-carrito">precio: $${product.price}</div>

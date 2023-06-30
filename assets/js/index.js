@@ -3,7 +3,7 @@ const smartphones = document.getElementById('smart-link');
 const laptops = document.getElementById('laptops-link');
 let smartActive = false;
 let laptopActive = false;
-let urlProd = "https://dummyjson.com/products";
+let urlProd = "https://acuastel.pythonanywhere.com/products";
 
 async function productData(){//obtiene los productos de la api
     await fetch(urlProd)
@@ -13,7 +13,7 @@ async function productData(){//obtiene los productos de la api
             let cards;
             smartphones.addEventListener("click", function(){//al hacer click en la targeta smartphones se crean las tarjetas de los productos smartphones
                 if(smartActive === false){//uso la condicion Active para escribir o borrar las tarjetas segun corresponda
-                    cardsFilter = productFilter("smartphones", data.products);//llamo solo los productos de la categoria smartphones
+                    cardsFilter = productFilter("smartphones", data);//llamo solo los productos de la categoria smartphones
                     cards = createCards(cardsFilter);
                     showCards(cards);
                     smartActive = true;
@@ -25,7 +25,7 @@ async function productData(){//obtiene los productos de la api
             });
             laptops.addEventListener("click", function(){//al hacer click en la tarjeta laptops se cran las tarjetas de los productos laptops
                 if(laptopActive === false){//uso la condicion Active para escribir o borrar las tarjetas segun corresponda
-                    cardsFilter = productFilter("laptops", data.products);//llamo solo los productos de la categoria laptops
+                    cardsFilter = productFilter("laptops", data);//llamo solo los productos de la categoria laptops
                     cards = createCards(cardsFilter);
                     showCards(cards);
                     laptopActive = true;

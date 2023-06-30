@@ -4,27 +4,27 @@ const laptops = document.getElementById('laptops');
 const all = document.getElementById('all');
 const textInput = document.getElementById('text-input');
 const buttonInput = document.getElementById('button-input');
-let urlProd = "https://dummyjson.com/products";
+let urlProd = "https://acuastel.pythonanywhere.com/products";
 
 async function productData(){
     await fetch(urlProd)
         .then(response => response.json())
         .then(data => {
-            let cardsFilter = filterAll(data.products);
+            let cardsFilter = filterAll(data);
             let cards = createCards(cardsFilter);
             showCards(cards);
             smartphones.addEventListener("click", function(){
-                cardsFilter = productFilter("smartphones", data.products);
+                cardsFilter = productFilter("smartphones", data);
                 cards = createCards(cardsFilter);
                 showCards(cards);
             });
             laptops.addEventListener("click", function(){
-                cardsFilter = productFilter("laptops", data.products);
+                cardsFilter = productFilter("laptops", data);
                 cards = createCards(cardsFilter);
                 showCards(cards);
             });
             all.addEventListener("click", function(){
-                cardsFilter = filterAll(data.products);
+                cardsFilter = filterAll(data);
                 cards = createCards(cardsFilter);
                 showCards(cards);
             });

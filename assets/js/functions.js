@@ -1,6 +1,6 @@
 function createCard(product){//crea una tarjeta de producto
     return `<a href="./details.html?id=${product.id}"><div class="card-principal">
-    <div class="card-img"><img src="${product.images[0]}" alt=""></div>
+    <div class="card-img"><img src="${product.imagen1}" alt=""></div>
     <div class="card-body">
         <div class="card-title">${product.title}</div>
         <div class="card-price">precio: $${product.price}</div>
