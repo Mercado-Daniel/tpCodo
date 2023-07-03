@@ -39,30 +39,30 @@
             <span class="icon-close">
                 <i class="fa-solid fa-xmark" onclick="history.back()"></i>
             </span>
-            <div class="form-box login">
-                <h2>Login</h2>
+            <div class="form-box login" id="app">
+                <h2>Ingreso</h2>
                 <form action="#" id="loginForm">
                     <div class="input-box">
                         <span class="icon">
                             <i class="fa-solid fa-envelope"></i>
                         </span>
-                        <input type="email" id="email" required>
+                        <input type="email" id="email" v-model='email' required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon">
                             <i class="fa-solid fa-lock"></i>
                         </span>
-                        <input type="password" id="password" required>
-                        <label>Password</label>
+                        <input type="password" id="password" v-model='contrasena' required>
+                        <label>Contraseña</label>
                     </div>
                     <div class="remember-forgot">
-                        <label><input type="checkbox" name="rememberme" id="rememberme">Remember me</label>
-                        <a href="#">Forgot Password?</a>
+                        <label><input type="checkbox" name="rememberme" id="rememberme">Recuerdame</label>
+                        <a href="#">¿Olvidó su contraseña?</a>
                     </div>
-                    <button type="submit" class="btn">Login</button>
+                    <button type="button" class="btn" v-on:click="ingresar()">Ingresar</button>
                     <div class="login-register">
-                        <p>Don't have an account? <a href="./registro.html" class="register-link">Register</a>
+                        <p>¿Aún no tienes una cuenta? <a href="./registro.html" class="register-link">Registrarse</a>
                         </p>
                     </div>
                 </form>
@@ -89,7 +89,8 @@
         </div>
 
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/login.js"></script>
-    <script type="module" src="/assets/js/details.js"></script>
+    <!-- <script type="module" src="./assets/js/details.js"></script> -->
 </body>
 </html>
