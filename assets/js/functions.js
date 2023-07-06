@@ -43,4 +43,30 @@ function textFilter(products, input){//le da funcionalidad a la barra de busqued
         }
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+    let login = sessionStorage.getItem("login");
+    console.log(login);
+    let btnIngresar = document.getElementById("login");
+    let btnCerrarSesion = document.getElementById("logout");
+    let carrito = document.getElementById("carrito");
+
+    if (login === "true") {
+      // Mostrar el botón si la condición es verdadera
+        btnCerrarSesion.style.display = "block";
+        carrito.style.display = "block";
+        btnIngresar.style.display = "none";
+    } else {
+      // Ocultar el botón si la condición es falsa
+        btnCerrarSesion.style.display = "none";
+        carrito.style.display = "none";
+        btnIngresar.style.display = "block";
+    }
+
+    btnCerrarSesion.addEventListener("click", function() {
+        sessionStorage.setItem("login", "false");
+        // Realizar cualquier otra acción necesaria al cerrar sesión
+        // ...
+      });
+});
+
 export {createCards, showCards, filterAll, productFilter, textFilter};

@@ -67,7 +67,7 @@ function paintDetails(product, productContainer){
     <button class="btnLogin" onclick="history.back()">Atras</button>
     </div>
     <div>
-    <button id="boton-agregar" class="btnLogin">Añadir al Carrito</button>
+    <button id="boton-agregar" class="btnLogin" >Añadir al Carrito</button>
     </div>
     `;
     productContainer.innerHTML = detail;

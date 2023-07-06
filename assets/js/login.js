@@ -16,55 +16,35 @@
 
 const { createApp } = Vue
     createApp({
-        data() {
-            return {
-                clientes:[],
-                url:'https://acuastel.pythonanywhere.com/clientes',
-                error:false,
-                cargando:true,
-                usuario:"",
-                nombre:"",
-                apellido:"",
-                direccion:"",
-                telefono:"",
-                email:"",
-                contrasena:"",
-                saldo:"",
+       data(){
+        return{
+            url:'https://acuastel.pythonanywhere.com/clientes',
+            datos:[],
+            email:"",
+            contrasena:"",
+        }
+       },
+       methods:{
+        fetchData(url){
+            fetch(url)
+                .then(response => response.json())
+                .then(data =>{
+                    this.datos = data
+                })
+                .catch(error => alert('se produjo un error' + error))
+        },
+        validar(){
+            arreglo = this.datos.filter(x => x.email == this.email)
+            console.log(arreglo)
+            if(arreglo[0].contrasena == this.contrasena){
+                sessionStorage.setItem('login', 'true')
+                window.location.href = "index.html"
+            }else{
+                alert("email o contraseña erronea")
             }
-        },
-        methods: {
-            fetchData(url) {                
-            },
-            ingresar(){
-                let clientes = {
-                    usuario: this.usuario,
-                    nombre: this.nombre,
-                    apellido: this.apellido,
-                    direccion: this.direccion,
-                    telefono: this.telefono,
-                    email: this.email,
-                    contrasena: this.contrasena,
-                    saldo: this.saldo
-                }
-                var options = {
-                    body: JSON.stringify(clientes),
-                    method: 'POST',
-                    headers: {'Content-Type': 'application/json'},
-                    redirect: 'follow'
-                }
-                fetch(this.url, options)
-                    .then(function () {
-                        alert("Usuario Registrado")
-                        window.location.href = "./login.html"
-                    })
-                    .catch(err => {
-                        console.error(err);
-                        alert("Error al registrar usuario")
-                    })
-            }
-
-        },
-        created() {
-            this.fetchData(this.url)
-        },
+        }
+       },
+       created(){
+        this.fetchData(this.url)
+       }
     }).mount('#app')
