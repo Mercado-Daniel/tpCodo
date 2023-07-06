@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let btnIngresar = document.getElementById("login");
     let btnCerrarSesion = document.getElementById("logout");
     let carrito = document.getElementById("carrito");
+    let agregar = document.getElementById("boton-agregar");
 
     if (login === "true") {
       // Mostrar el botón si la condición es verdadera
