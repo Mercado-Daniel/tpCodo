@@ -11,4 +11,13 @@ logout.addEventListener('click', () => {
     window.location.href = 'index.html';
 });
 
+const perfilBtn = document.getElementById('perfil-btn');
+perfilBtn.addEventListener("click", function(){
 
+    window.location.href = './perfil.html';
+});
+
+const actualizarDatos = document.getElementById('modDatos');
+actualizarDatos.addEventListener("click", function(){
+    window.location.href = './cliente_update_cliente.html';
+})

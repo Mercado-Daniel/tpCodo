@@ -1,3 +1,4 @@
+
 function createCard(product){//crea una tarjeta de producto
     return `<a href="./details.html?id=${product.id}"><div class="card-principal">
     <div class="card-img"><img src="${product.imagen1}" alt=""></div>
@@ -49,25 +50,34 @@ document.addEventListener("DOMContentLoaded", function() {
     let btnIngresar = document.getElementById("login");
     let btnCerrarSesion = document.getElementById("logout");
     let carrito = document.getElementById("carrito");
-    let agregar = document.getElementById("boton-agregar");
+    let perfilBtn = document.getElementById("perfil-btn");
+    let saldo = document.getElementById("saldo-cliente");
 
     if (login === "true") {
       // Mostrar el botón si la condición es verdadera
         btnCerrarSesion.style.display = "block";
         carrito.style.display = "block";
+        saldo.style.display = "block";
+        perfilBtn.style.display = "block";
         btnIngresar.style.display = "none";
     } else {
       // Ocultar el botón si la condición es falsa
         btnCerrarSesion.style.display = "none";
         carrito.style.display = "none";
+        saldo.style.display = "none";
+        perfilBtn.style.display = "none";
         btnIngresar.style.display = "block";
     }
 
+    
+
     btnCerrarSesion.addEventListener("click", function() {
         sessionStorage.setItem("login", "false");
-        // Realizar cualquier otra acción necesaria al cerrar sesión
-        // ...
+        localStorage.removeItem('productos-En-Carrito');
+        sessionStorage.removeItem("idCliente");
+
       });
 });
+
 
 export {createCards, showCards, filterAll, productFilter, textFilter};

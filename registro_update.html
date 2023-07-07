@@ -21,12 +21,13 @@
             <div class="user-nav">
                 <button id="perfil-btn" class="btnLogin">Perfil</button>
                 <button id="login" class="btnLogin">Iniciar Sesión</button>
+                
                 <button id="logout"class="btnLogin" style="display: none;">Cerrar Sesión</button>
                 <a id="carrito" href="./carrito.html" style="display: none;">
                     <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"><span id="litle-number">0</span></i>
                 </a>
                 <p id="saldo-cliente">Saldo $<span id="saldo">0</span></p>
-            </div>           
+            </div>              
         </nav>
         <nav class="nav2">
             <div class="user-nav2">
@@ -36,22 +37,61 @@
                 <a href="./contacto.html" class="contacto">Contacto</a>
             </div>
         </nav>     
+       
     </header>
-    <main  class="mainIndex">
-        <article id="card-carrito-container">
-           
-        </article>
-        <div class="total-carrito">
-            <div id="total">
-
+    <main class="loginRegister">
+        <div class="wrapper">
+            <span class="icon-close">
+                <i class="fa-solid fa-xmark" onclick="history.back()"></i>
+                <!-- <i class="fa-solid fa-xmark" v-on:click="clientes.html"></i> -->
+            </span>
+            <div class="form-box register" id="app">
+                <h2>Actualización de Usuario</h2>
+                <form action="#" id="signupForm">
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <input type="number" id="id" v-model="id">
+                        <label for="id">Id</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="username" v-model="usuario" >
+                        <label for="usuario">Usuario</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="nombre" >
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="apellido" >
+                        <label for="apellido">Apellido</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="direccion" >
+                        <label for="direccion">Dirección</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="telefono" >
+                        <label for="telefono">Teléfono</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <input type="email" id="email" v-model="email" >
+                        <label for="email">Email</label>
+                    </div>
+                    <!-- <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <input type="password" id="password" v-model="contrasena" >
+                        <label for="contrasena">Contraseña</label>
+                    </div> -->
+                    <button type="button" class="btn" v-on:click="modificar()">Actualizar</button>                    
+                </form>
             </div>
-            <div>
-                <button id="boton-comprarTodo" class="btnLogin">Comprar</button>
-                <button id="boton-limpiar" class="btnLogin">Vaciar el Carrito</button>
-            </div>
-        </div>
-        <div>
-            <button class="btnLogin" onclick="history.back()">Seguir Comprando</button>
         </div>
     </main>
     <footer>
@@ -71,12 +111,11 @@
         <div id="footer4">
             <p>Copyright © 2023, HighTechZone.com</p>
             <p class="ultimo">Buenos Aires, Argentina</p>
-        </div>
+        </div>        
     </footer>
-    <script type="module" src="/assets/js/index.js"></script>
-    <script type="module" src="/assets/js/functions.js"></script>
-    <script type="module" src="/assets/js/main.js"></script>
-    <script type="module" src="/assets/js/details.js"></script>
-    <script type="module" src="/assets/js/carrito.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="./assets/js/registro_update.js"></script>    
+    <script type="module" src="./assets/js/details.js"></script>
+    <script type="module" src="./assets/js/functions.js"></script>
 </body>
 </html>
