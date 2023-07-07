@@ -19,11 +19,15 @@
                 <a href="./index.html"><img class="logo1" src="./assets/images/LogoTP.png" alt="logo"></a>
             </div>
             <div class="user-nav">
-                <!-- <button id="logout" class="btnLogout">Logout</button> -->                
-                <a href="./carrito.html">
+                <button id="perfil-btn" class="btnLogin">Perfil</button>
+                <button id="login" class="btnLogin">Iniciar Sesión</button>
+                
+                <button id="logout"class="btnLogin" style="display: none;">Cerrar Sesión</button>
+                <a id="carrito" href="./carrito.html" style="display: none;">
                     <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"><span id="litle-number">0</span></i>
                 </a>
-            </div>            
+                <p id="saldo-cliente">Saldo $<span id="saldo">0</span></p>
+            </div>              
         </nav>
         <nav class="nav2">
             <div class="user-nav2">
@@ -111,6 +115,7 @@
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
     <script src="./assets/js/registro_update.js"></script>    
-    <!-- <script type="module" src="./assets/js/details.js"></script> -->
+    <script type="module" src="./assets/js/details.js"></script>
+    <script type="module" src="./assets/js/functions.js"></script>
 </body>
 </html>

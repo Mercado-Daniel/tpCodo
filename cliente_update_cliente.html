@@ -21,12 +21,13 @@
             <div class="user-nav">
                 <button id="perfil-btn" class="btnLogin">Perfil</button>
                 <button id="login" class="btnLogin">Iniciar Sesión</button>
+                
                 <button id="logout"class="btnLogin" style="display: none;">Cerrar Sesión</button>
                 <a id="carrito" href="./carrito.html" style="display: none;">
                     <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"><span id="litle-number">0</span></i>
                 </a>
                 <p id="saldo-cliente">Saldo $<span id="saldo">0</span></p>
-            </div>        
+            </div>              
         </nav>
         <nav class="nav2">
             <div class="user-nav2">
@@ -36,31 +37,54 @@
                 <a href="./contacto.html" class="contacto">Contacto</a>
             </div>
         </nav>     
+       
     </header>
-    <main class="mainIndex">
-        <h2 class="h2-title">PREGUNTAS FRECUENTES</h2>
-        <ol>
-            <li>¿Qué métodos de pago acepta la tienda?</li>
-            <p>R: Aceptamos tarjetas de crédito y débito, PayPal y transferencias bancarias.</p>
-            <li>¿Cómo puedo saber si un producto está disponible?</li>
-            <p>R: Si un producto está disponible para la compra, se mostrará como "Disponible" en la página de detalles del producto. Si el producto no está disponible, se mostrará como "Agotado" o "No disponible en este momento".</p>
-            <li>¿Puedo cancelar mi pedido?</li>
-            <p>R: Si su pedido aún no ha sido procesado, puede cancelarlo. Comuníquese con nuestro servicio de atención al cliente para solicitar la cancelación.</p>
-            <li>¿Cuánto tiempo tardará en llegar mi pedido?</li>
-            <p>R: El tiempo de entrega varía según la ubicación del cliente y el producto comprado. Se proporcionará una fecha estimada de entrega al momento de realizar el pedido.</p>
-            <li>¿Cómo puedo rastrear mi pedido?</li>
-            <p>R: Una vez que su pedido haya sido enviado, se le proporcionará un número de seguimiento para que pueda rastrear su paquete a través del sitio web del servicio de mensajería.</p>
-            <li>¿Cuál es la política de devoluciones de la tienda?</li>
-            <p>R: Aceptamos devoluciones dentro de los 30 días posteriores a la entrega del producto, siempre y cuando el producto esté en su condición original y en su empaque original. Los clientes son responsables de los gastos de envío para la devolución del producto.</p>
-            <li>¿Qué garantías ofrecen los productos?</li>
-            <p>R: Todos nuestros productos están cubiertos por una garantía limitada contra defectos de fabricación. La duración de la garantía varía según el producto.</p>
-            <li>¿Puedo recoger mi pedido en la tienda?</li>
-            <p>R: No ofrecemos recogida en la tienda en este momento. Todos los productos se envían directamente al cliente.</p>
-            <li>¿Puedo hacer cambios en mi pedido después de haberlo realizado?</li>
-            <p>R: Si su pedido aún no ha sido procesado, es posible que podamos realizar cambios. Comuníquese con nuestro servicio de atención al cliente para solicitar cualquier cambio en su pedido.</p>
-            <li>¿Puedo obtener ayuda para configurar mi nuevo dispositivo?</li>
-            <p>R: Sí, ofrecemos soporte técnico para ayudar a los clientes a configurar y usar sus nuevos dispositivos. Póngase en contacto con nuestro servicio de atención al cliente para obtener más información.</p>
-        </ol>
+    <main class="loginRegister">
+        <div class="wrapper">
+            <span class="icon-close">
+                <i class="fa-solid fa-xmark" onclick="history.back()"></i>
+                <!-- <i class="fa-solid fa-xmark" v-on:click="clientes.html"></i> -->
+            </span>
+            <div class="form-box register" id="app">
+                <h2>Actualización de Usuario</h2>
+                    <div class="input-box">
+                        <input type="text" id="username" v-model="usuario" >
+                        <label for="usuario">Usuario</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="nombre" >
+                        <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="apellido" >
+                        <label for="apellido">Apellido</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="direccion" >
+                        <label for="direccion">Dirección</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="telefono" >
+                        <label for="telefono">Teléfono</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <input type="email" id="email" v-model="email" >
+                        <label for="email">Email</label>
+                    </div>
+                    <!-- <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <input type="password" id="password" v-model="contrasena" >
+                        <label for="contrasena">Contraseña</label>
+                    </div> -->
+                    <button type="button" class="btn" v-on:click="modificar()">Actualizar</button>                    
+                </form>
+            </div>
+        </div>
     </main>
     <footer>
         <div id="footer1">
@@ -79,10 +103,11 @@
         <div id="footer4">
             <p>Copyright © 2023, HighTechZone.com</p>
             <p class="ultimo">Buenos Aires, Argentina</p>
-        </div>
+        </div>        
     </footer>
-    <script src="./assets/js/main.js"></script>
-    <script type="module" src="/assets/js/details.js"></script> 
-    <script type="module" src="/assets/js/functions.js"></script>   
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="./assets/js/cliente_update_cliente.js"></script>    
+    <script type="module" src="./assets/js/details.js"></script>
+    <script type="module" src="./assets/js/functions.js"></script>
 </body>
 </html>

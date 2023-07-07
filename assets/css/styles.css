@@ -1188,3 +1188,7 @@ footer {
     align-items: center;
     justify-content: space-evenly;
 }
+
+#saldo-cliente{
+    color:aliceblue;
+}

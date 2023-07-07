@@ -37,6 +37,7 @@ const { createApp } = Vue
             arreglo = this.datos.filter(x => x.email == this.email)
             if(arreglo[0].contrasena == this.contrasena){
                 sessionStorage.setItem('login', 'true')
+                sessionStorage.setItem('idCliente',arreglo[0].id)
                 window.location.href = "index.html"
             }else{
                 alert("email o contraseña erronea")
