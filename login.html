@@ -20,6 +20,9 @@
             </div>
             <div class="user-nav">
                 <!-- <button id="logout" class="btnLogout">Logout</button> -->
+                <a href="./carrito.html">
+                    <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"><span id="litle-number">0</span></i>
+                </a>
             </div>            
         </nav>
         <nav class="nav2">
@@ -57,7 +60,7 @@
                         <label><input type="checkbox" name="rememberme" id="rememberme">Recuerdame</label>
                         <a href="#">¿Olvidó su contraseña?</a>
                     </div>
-                    <button type="button" class="btn" @click="validar()">Ingresar</button>
+                    <button type="button" class="btn" v-on:click="ingresar()">Ingresar</button>
                     <div class="login-register">
                         <p>¿Aún no tienes una cuenta? <a href="./registro.html" class="register-link">Registrarse</a>
                         </p>
@@ -88,5 +91,6 @@
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./assets/js/login.js"></script>
+    <!-- <script type="module" src="./assets/js/details.js"></script> -->
 </body>
 </html>

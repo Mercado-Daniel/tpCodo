@@ -1,17 +1,20 @@
-// const loginForm = document.querySelector('#loginForm')
-
-// loginForm.addEventListener('submit', (e)=> {
+// const signupForm = document.querySelector('#signupForm')
+// signupForm.addEventListener('submit', (e)=> {
 //     e.preventDefault()
+//     const name = document.querySelector('#username').value
 //     const email = document.querySelector('#email').value
 //     const password = document.querySelector('#password').value
+
 //     const Users = JSON.parse(localStorage.getItem('users')) || []
-//     const validUser = Users.find(user => user.email === email && user.password === password)
-//     if (!validUser) {
-//         return alert('Usuario y/o Contraseña incorrectos!')
+//     const isUserRegistered = Users.find(user => user.email === email)
+//     if (isUserRegistered) {
+//         return alert('El usuario ya está registrado!')
 //     }
-//     alert(`Bienvenido ${validUser.name}`)
-//     localStorage.setItem('login_success', JSON.stringify(validUser))
-//     window.location.href = 'index.html'
+
+//     Users.push({name: name, email: email, password: password})
+//     localStorage.setItem('users', JSON.stringify(Users))
+//     alert('Registro Exitoso!')
+//     window.location.href = 'login.html'
 // })
 
 const { createApp } = Vue
@@ -35,7 +38,7 @@ const { createApp } = Vue
         methods: {
             fetchData(url) {                
             },
-            ingresar(){
+            grabar(){
                 let clientes = {
                     usuario: this.usuario,
                     nombre: this.nombre,
@@ -55,7 +58,7 @@ const { createApp } = Vue
                 fetch(this.url, options)
                     .then(function () {
                         alert("Usuario Registrado")
-                        window.location.href = "./login.html"
+                        window.location.href = "./clientes.html"
                     })
                     .catch(err => {
                         console.error(err);

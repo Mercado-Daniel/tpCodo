@@ -172,10 +172,11 @@ iframe{
     background-color: white;
 }
 .mainIndex {
-    padding: 10px 25px;    
+    padding: 20px;    
     background: linear-gradient(150deg, #ccf1f7, #6fbeab);
-    width: 80vw;
-    margin: 0 auto;    
+    width: 90vw;
+    margin: 0 auto;
+    border-radius: 5px;    
 }
 .mainIndex h2 {
     text-align: center;
@@ -185,7 +186,9 @@ iframe{
 main {
     background-color: ivory;
     min-height: 65vh;
+    font-family: 'Roboto Condensed', sans-serif
 }
+
 .cats-section{
     display: flex;
     justify-content: space-around;
@@ -216,7 +219,7 @@ main {
     padding: 10px 25px;    
     background: linear-gradient(150deg, #ccf1f7, #6fbeab);
     width: 80vw;
-    margin: 0 auto;    
+    margin: 0 auto 5px;    
 }
 .mainIndex h2 {
     text-align: center;
@@ -238,8 +241,10 @@ main {
 }
 .h2-title {
     text-align: center;
-    background: linear-gradient(90deg, #6f9ebe,#ccf1f7, #6f9ebe);
+    background: linear-gradient(90deg, #07609b,#1ab3ca, #07609b);
     padding: 10px;
+    border-radius: 5px;
+    color: white;
 }
 /* Estilos para el archivo login y register.html */
 .loginRegister {
@@ -275,6 +280,11 @@ main {
     width: 80%;
     padding: 40px;
 }
+
+.wrapper .adm-box {
+    width: 100%;
+    padding: 40px;
+}
 .wrapper .form-box.login {
     transition: none;
     transform: translateX(0);
@@ -289,10 +299,10 @@ main {
     position: absolute;
     top: 0;
     right: 0;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     background-color: #162938;
-    font-size: 2em;
+    font-size: 1em;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -311,7 +321,7 @@ main {
     width: 100%;
     height: 30px;
     border-bottom: 2px solid #162938;
-    margin: 30px 0;
+    margin: 20px 0;
 }
 .input-box label {
     position: absolute;
@@ -376,7 +386,11 @@ main {
     font-size: 1em;
     color: #fff;
     font-weight: 500;
+    margin: 0;
+    padding: 6px;
+    align-items: center;
 }
+
 .login-register {
     font-size: .9em;
     color: #162938;
@@ -395,11 +409,14 @@ main {
 
 /* -------------------------------------------------------------------- */
 
-.h2-nosotros { grid-area: h2;
+.h2-nosotros {
+    grid-area: h2;
     text-align: center;
     /* background-color: #8cbbe7; */
-    background: linear-gradient(90deg, #6f9ebe,#ccf1f7, #6f9ebe);
+    /* background: linear-gradient(90deg, #6f9ebe,#ccf1f7, #034069); */
+    background: linear-gradient(90deg, #07609b,#1ab3ca, #07609b);
     padding: 10px;
+    border-radius: 5px;
 }
 .p-1 { grid-area: p-1;
     text-align: justify;}
@@ -430,7 +447,41 @@ main {
         'p-5 p-5';
     gap: 10px;
 }
-footer {
+
+.nuevo {
+    width: 80px;
+    height: 35px;   
+}
+
+.nuevo a {
+    text-align: center;
+    vertical-align: middle;   
+}
+
+.modificar {
+    background: #c7da85;
+    border-radius: 5px;
+    color: #242323;
+    margin: 5px;
+    padding: 3px 10px;
+    width: 100px;
+    vertical-align: middle;
+    text-align: center;
+    align-content: center;
+    text-decoration: none;
+}
+
+.eliminar {
+    width: 80px;
+    margin: 5px;
+    background: #da8585;
+    border-radius: 5px;
+    border: none;
+    padding: auto;
+    color: white;
+}
+
+/* footer {
     padding: 10px;
 }
 .p-1 { grid-area: p-1;
@@ -461,21 +512,22 @@ footer {
         'img2 p-4'
         'p-5 p-5';
     gap: 10px;
-}
+} */
+
 footer {
     height: auto;
     background-color: black;
     font-family: 'Roboto Condensed', sans-serif;
-    padding-bottom: 5px;
+    padding: 10px 0;
 }
 #footer1 {
     display: block;
     align-items: center;
     text-align: center;
     background-color: white;
-    margin: 0 -10px;
-    padding-top: 10px;
-    height: 30px;
+    margin: 0;
+    padding-top: 5px;
+    height: 34px;
 }
 .volver1 {
     color: rgb(0, 0, 0);
@@ -483,6 +535,7 @@ footer {
     font-weight: bold;
     width: 100vw;
     height: 19px;
+    margin-top: 5px;
 }
 #footer1 a:hover {
     background-color: black;

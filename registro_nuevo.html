@@ -19,7 +19,7 @@
                 <a href="./index.html"><img class="logo1" src="./assets/images/LogoTP.png" alt="logo"></a>
             </div>
             <div class="user-nav">
-                <button id="login" class="btnLogin" href="login.html">Iniciar Sesión</button>
+                <!-- <button id="logout" class="btnLogout">Logout</button> -->                
                 <a href="./carrito.html">
                     <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"><span id="litle-number">0</span></i>
                 </a>
@@ -33,56 +33,57 @@
                 <a href="./contacto.html" class="contacto">Contacto</a>
             </div>
         </nav>     
+       
     </header>
-    
-    <main class="mainIndex" >
-        <div class="titlem">
-            <h2 class="h2-title">HOME</h2>
-        </div>
-        <aside class="slider-container"> 
-            <div class="slider-frame">
-                <ul>
-                    <li>
-                        <div class="slider1"></div>
-                    </li>
-                    <li>
-                        <div class="slider2"></div>
-                    </li>
-                    <li>
-                        <div class="slider3"></div>
-                    </li>
-                </ul>
+    <main class="loginRegister">
+        <div class="wrapper">
+            <span class="icon-close">
+                <i class="fa-solid fa-xmark" onclick="history.back()"></i>
+            </span>
+            <div class="form-box register" id="app">
+                <h2>Registro de Usuario</h2>
+                <form action="#" id="signupForm">
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-user"></i>
+                        </span>
+                        <input type="text" id="username" v-model="usuario" required>
+                        <label>Usuario</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="nombre" required>
+                        <label>Nombre</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="apellido" required>
+                        <label>Apellido</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="direccion" required>
+                        <label>Dirección</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="telefono" required>
+                        <label>Teléfono</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-envelope"></i>
+                        </span>
+                        <input type="email" id="email" v-model="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <input type="password" id="password" v-model="contrasena" required>
+                        <label>Contraseña</label>
+                    </div>
+                    <button type="button" class="btn" v-on:click="grabar()">Registrar</button>
+                </form>
             </div>
-        </aside>
-        <section class="cats-section">
-            <button  id="smart-link">
-                <div class="card-main">
-                    <div class="card-img-m"><img  src="./assets/images/smartphones.jpg" alt=""></div>
-                    <div class="card-body-m">
-                        <div class="card-title">Smartphones</div>
-                    </div>
-                </div>
-            </button>
-            <a href="./products.html">
-                <div class="card-main">
-                    <div class="card-img-m"><img  src="./assets/images/slide-2.jpg" alt=""></div>
-                    <div class="card-body-m">
-                        <div class="card-title">Todos los productos</div>
-                    </div>
-                </div>
-            </a>
-            <button id="laptops-link">
-                <div class="card-main">
-                    <div class="card-img-m"><img  src="./assets/images/laptops.jpg" alt=""></div>
-                    <div class="card-body-m">
-                        <div class="card-title">Laptops</div>
-                    </div>
-                </div>
-            </button>
-        </section >
-        <aside id="cards-container">
-
-        </aside>
+        </div>
     </main>
     <footer>
         <div id="footer1">
@@ -101,11 +102,10 @@
         <div id="footer4">
             <p>Copyright © 2023, HighTechZone.com</p>
             <p class="ultimo">Buenos Aires, Argentina</p>
-        </div>
+        </div>        
     </footer>
-    <script type="module" src="/assets/js/index.js"></script>
-    <script type="module" src="/assets/js/functions.js"></script>
-    <script type="module" src="/assets/js/main.js"></script>
-    <script type="module" src="/assets/js/details.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="./assets/js/registro_nuevo.js"></script>    
+    <!-- <script type="module" src="./assets/js/details.js"></script> -->
 </body>
 </html>
