@@ -22,15 +22,10 @@ function showCards(cardsFilters){//muestra las tarjetas de producto
     cardsContainer.innerHTML = cardsFilters;
     
 }
-function filterAll(product){//filtra los productos disponibles
-        const laptopsSmartphones = product.filter(function(producto) {
-        return producto.category === "laptops" || producto.category === "smartphones";
-        });
-        return laptopsSmartphones;
-    }
+
 function productFilter(categoryF, product){//filtra los productos en base a una categoria
     const productf = product.filter(function(pro){
-        return pro.category === categoryF;
+        return pro.category.toLowerCase() === categoryF;
     });
     return productf;
 }
@@ -80,4 +75,4 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-export {createCards, showCards, filterAll, productFilter, textFilter};
+export {createCards, showCards, productFilter, textFilter};
