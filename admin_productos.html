@@ -21,9 +21,6 @@
             </div>
             <div class="user-nav">
                 <!-- <button id="logout" class="btnLogout">Logout</button> -->                
-                <a href="./carrito.html">
-                    <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"><span id="litle-number">0</span></i>
-                </a>
             </div>            
         </nav>
         <nav class="nav2">
@@ -40,7 +37,7 @@
         <div id="app" class="container">
             <h1 class="text-center h2-title">Administración de Productos</h1>
             <br>
-            <a class="btn btn-primary nuevo" href="registro_nuevo.html">Nuevo</a>
+            <a class="btn btn-primary nuevo" href="admin_nuevo_producto.html">Nuevo</a>
             <br><br>
             <div v-if="error">
                 <p>Lo sentimos , ........</p>
@@ -87,7 +84,8 @@
                     </div>
                 </section>
             </div>
-        </div>                        
+        </div>  
+        <a href="./administrador.html"><button class="btnLogin" >volver</button> </a>                      
     </main>
     <footer>
         <div id="footer1">

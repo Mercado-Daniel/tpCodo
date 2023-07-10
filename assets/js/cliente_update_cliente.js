@@ -1,3 +1,4 @@
+
 console.log(location.search)     // lee los argumentos pasados a este formulario
 var id=sessionStorage.getItem("idCliente"); // producto_update.html?id=1
 console.log(id)
@@ -23,7 +24,6 @@ const { createApp } = Vue
                 fetch(url)
                     .then(response => response.json())
                     .then(data => {
-                        console.log(data)
                         this.id=data.id
                         this.usuario=data.usuario
                         this.nombre=data.nombre
@@ -32,7 +32,8 @@ const { createApp } = Vue
                         this.telefono=data.telefono
                         this.email=data.email
                         this.contrasena=data.contrasena
-                        this.saldo=data.saldo                     
+                        this.saldo = data.saldo;
+                        this.saldoActual = data.saldo
                     })
                     .catch(err => {
                         console.error(err);
@@ -48,7 +49,7 @@ const { createApp } = Vue
                     telefono: this.telefono,
                     email: this.email,
                     contrasena: this.contrasena,
-                    saldo: this.saldo
+                    saldo:this.saldo + this.saldoActual,
                 }
                 var options = {
                     body: JSON.stringify(cliente),

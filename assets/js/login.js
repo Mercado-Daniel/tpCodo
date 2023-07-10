@@ -34,6 +34,9 @@ const { createApp } = Vue
                 .catch(error => alert('se produjo un error' + error))
         },
         validar(){
+            if(this.email == "admin@admin" && this.contrasena == "admin"){
+                window.location.href = "administrador.html"
+            }
             arreglo = this.datos.filter(x => x.email == this.email)
             if(arreglo[0].contrasena == this.contrasena){
                 sessionStorage.setItem('login', 'true')
