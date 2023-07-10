@@ -33,56 +33,23 @@
         </nav>     
        
     </header>
-    <main class="mainIndex" id="app">
-        <div id="app" class="container">
-            <h1 class="text-center h2-title">Administración de Clientes</h1>
-            <br>
-            <a class="btn btn-primary nuevo" href="registro_nuevo.html">Nuevo</a>
-            <br><br>
-            <div v-if="error">
-                <p>Lo sentimos , ........</p>
+    <main class="mainIndex d-flex justify-content-around" id="app" >
+        <div class="card" style="width: 40%;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">PRODUCTOS</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="./admin_productos.html" class="btn btn-primary">Administrar Productos</a>
             </div>
-            <div v-else>
-                <section v-if="cargando">
-                    <div class="spinner-border"></div>
-                    <p>Cargando .....</p>
-                </section>
-                <section v-else>
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover">
-                            <thead>
-                                <tr class="text-center">
-                                    <th scope="col">Id</th>
-                                    <th scope="col">Usuario</th>
-                                    <th scope="col">Nombre</th>
-                                    <th scope="col">Apellido</th>
-                                    <th scope="col">Dirección</th>
-                                    <th scope="col">Teléfono</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col"></th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr  class="align-middle text-center" v-for="cliente in clientes">
-                                    <td scope="row">{{cliente.id}}</td>
-                                    <td>{{cliente.usuario}}</td>
-                                    <td>{{cliente.nombre}}</td>
-                                    <td>{{cliente.apellido}}</td>
-                                    <td>{{cliente.direccion}}</td>
-                                    <td>{{cliente.telefono}}</td>
-                                    <td>{{cliente.email}}</td>
-                                    <td>
-                    			        <a class="tabla modificar" :href="'registro_update.html?id='+cliente.id">Actualizar</a>
-                                        <button type="button" class="tabla eliminar" v-on:click="eliminar(cliente.id)">Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </section>
+          </div>
+          <div class="card" style="width: 40%;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">CLIENTES</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="./clientes.html" class="btn btn-primary">Administrar Clientes</a>
             </div>
-        </div> 
-        <a href="./administrador.html"><button class="btnLogin" >volver</button> </a>                      
+          </div>
     </main>
     <footer>
         <div id="footer1">
@@ -106,7 +73,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
-    <script src="./assets/js/clientes.js"></script>     
-    <!-- <script type="module" src="/assets/js/details.js"></script> -->
+    <script src="./assets/js/admin_productos.js"></script>     
 </body>
 </html>
