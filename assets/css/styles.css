@@ -228,7 +228,6 @@ main {
     font-weight: bold;
 }
 
-
 .h2-title {
     text-align: center;
     background: linear-gradient(90deg, #07609b,#1ab3ca, #07609b);
@@ -240,13 +239,13 @@ main {
 .loginRegister {
     padding: 10px 25px;    
     background: linear-gradient(150deg, #ccf1f7, #6fbeab);
-    width: 60vw;
+    max-width: 687px;
     place-items: center;
     margin: 10px auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 120vh;
     background-color: rgb(0, 148, 136);
 }
 .wrapper {
