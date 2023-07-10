@@ -37,23 +37,24 @@
             </div>
         </nav>     
     </header>
-    <main  class="mainIndex">
-        <article id="card-carrito-container">
-           
-        </article>
-        <div class="total-carrito">
-            <div id="total">
-
+    <div id="app">
+        <main  class="mainIndex">
+            <article id="card-carrito-container">
+            </article>
+            <div class="total-carrito">
+                <div id="total">
+    
+                </div>
+                <div>
+                    <button id="boton-comprarTodo" class="btnLogin" v-on:click="comprar()">Comprar</button>
+                    <button id="boton-limpiar" class="btnLogin" >Vaciar el Carrito</button>
+                </div>
             </div>
             <div>
-                <button id="boton-comprarTodo" class="btnLogin">Comprar</button>
-                <button id="boton-limpiar" class="btnLogin">Vaciar el Carrito</button>
+                <button class="btnLogin" onclick="history.back()">Seguir Comprando</button>
             </div>
-        </div>
-        <div>
-            <button class="btnLogin" onclick="history.back()">Seguir Comprando</button>
-        </div>
-    </main>
+        </main>
+    </div>
     <footer>
         <div id="footer1">
             <a class="volver1" href="#arriba">Volver al inicio</a>            
@@ -73,10 +74,10 @@
             <p class="ultimo">Buenos Aires, Argentina</p>
         </div>
     </footer>
-    <script type="module" src="/assets/js/index.js"></script>
+    <script type="module" src="/assets/js/carrito.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" src="/assets/js/functions.js"></script>
     <script type="module" src="/assets/js/main.js"></script>
-    <script type="module" src="/assets/js/details.js"></script>
-    <script type="module" src="/assets/js/carrito.js"></script>
+
 </body>
 </html>

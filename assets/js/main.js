@@ -17,7 +17,22 @@ perfilBtn.addEventListener("click", function(){
     window.location.href = './perfil.html';
 });
 
-const actualizarDatos = document.getElementById('modDatos');
-actualizarDatos.addEventListener("click", function(){
-    window.location.href = './cliente_update_cliente.html';
-})
+
+const queryString = location.search;
+const saldo = document.getElementById('saldo');
+const params = new URLSearchParams(queryString);
+const id = sessionStorage.getItem("idCliente");
+let urlCliente = "https://acuastel.pythonanywhere.com/clientes";
+
+async function create(){
+    await fetch(urlCliente)
+        .then(response => response.json())
+        .then(data =>{
+            const cliente = data.find(cliente => cliente.id == id);
+            console.log(cliente);
+            let saldoCliente = cliente.saldo;
+            saldo.innerText = saldoCliente
+    });
+}
+create();
+

@@ -1,4 +1,5 @@
 import {createCards, showCards, filterAll, productFilter, textFilter} from "./functions.js";
+import { actualizarNumerito } from "./details.js";
 const smartphones = document.getElementById('smart');
 const laptops = document.getElementById('laptops');
 const all = document.getElementById('all');
@@ -35,3 +36,4 @@ async function productData(){
         });
 }
 productData();//llama a los productos desde la api
+actualizarNumerito();
