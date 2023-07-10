@@ -75,7 +75,7 @@
                                     <td>{{product.description}}</td>
                                     <td> <img :src="product.imagen1" width="50"><img :src="product.imagen2" width="50"><img :src="product.imagen3" width="50"> </td>
                                     <td>
-                    			        <a class="tabla modificar" :href="'registro_update.html?id='+product.id">Actualizar</a>
+                    			        <a class="tabla modificar" :href="'admin_update_producto.html?id='+product.id">Actualizar</a>
                                         <button type="button" class="tabla eliminar" v-on:click="eliminar(product.id)">Eliminar</button>
                                     </td>
                                 </tr>

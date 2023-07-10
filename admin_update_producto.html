@@ -19,11 +19,8 @@
                 <a href="./index.html"><img class="logo1" src="./assets/images/LogoTP.png" alt="logo"></a>
             </div>
             <div class="user-nav">
-                <!-- <button id="logout" class="btnLogout">Logout</button> -->                
-                <a href="./carrito.html">
-                    <i class="fa-solid fa-cart-shopping fa-lg" style="color: #ffffff;"><span id="litle-number">0</span></i>
-                </a>
-            </div>            
+                
+            </div>              
         </nav>
         <nav class="nav2">
             <div class="user-nav2">
@@ -39,10 +36,15 @@
         <div class="wrapper">
             <span class="icon-close">
                 <i class="fa-solid fa-xmark" onclick="history.back()"></i>
+                <!-- <i class="fa-solid fa-xmark" v-on:click="clientes.html"></i> -->
             </span>
             <div class="form-box register" id="app">
-                <h2>Registrar Producto</h2>
+                <h2>Actualización de Producto</h2>
                 <form action="#" id="signupForm">
+                    <div class="input-box">
+                        <input type="text" id="name" v-model="id" required>
+                        <label>id</label>
+                    </div>
                     <div class="input-box">
                         <input type="text" id="name" v-model="title" required>
                         <label>Nombre</label>
@@ -56,16 +58,16 @@
                         <label>Categoria</label>
                     </div>
                     <div class="input-box">                        
-                        <input type="number" id="name" v-model="stock" required>
+                        <input type="text" id="name" v-model="stock" required>
                         <label>Stock</label>
                     </div>
                     <div class="input-box">                        
                         <input type="text" id="name" v-model="price" required>
-                        <label>Descripcion</label>
+                        <label>Precio</label>
                     </div>
                     <div class="input-box">                        
-                        <input type="number" id="name" v-model="description" required>
-                        <label>Precio</label>
+                        <input type="text" id="name" v-model="description" required>
+                        <label>Descripcion</label>
                     </div>
                     <div class="input-box">                        
                         <input type="text" id="name" v-model="imagen1" required>
@@ -79,7 +81,7 @@
                         <input type="text" id="name" v-model="imagen3" required>
                         <label>Imagen 3</label>
                     </div>
-                    <button type="button" class="btn" v-on:click="grabar()">Registrar</button>
+                    <button type="button" class="btn" v-on:click="modificar()">Actualizar</button>
                 </form>
             </div>
         </div>
@@ -104,7 +106,6 @@
         </div>        
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
-    <script src="./assets/js/admin_nuevo_producto.js"></script>    
-    <!-- <script type="module" src="./assets/js/details.js"></script> -->
+    <script src="./assets/js/admin_update_producto.js"></script>    
 </body>
 </html>

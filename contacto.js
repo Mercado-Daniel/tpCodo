@@ -1,8 +1,8 @@
 const formulario = document.getElementById('formulario');
-const name = document.getElementById('name')
-const lastname = document.getElementById('lastname')
-const email = document.getElementById('email')
-const tel = document.getElementById('tel')
+const nombre = document.getElementById('name');
+const lastname = document.getElementById('lastname');
+const email = document.getElementById('email');
+const tel = document.getElementById('tel');
 
 formulario.addEventListener('submit', e => {
     e.preventDefault();
@@ -10,15 +10,15 @@ formulario.addEventListener('submit', e => {
 })
 
 function checkInputs() {
-    const nameValue = name.value.trim();
+    const nameValue = nombre.value.trim();
     const lastnameValue = lastname.value.trim();
     const emailValue = email.value.trim();
     const telValue = tel.value.trim();
 
     if(nameValue === '') {
-        setErrorFor(name, 'Ingrese su nombre');
+        setErrorFor(nombre, 'Ingrese su nombre');
     }else{
-        setSuccesfor(name);
+        setSuccesfor(nombre);
     }
 
     if(lastnameValue === '') {

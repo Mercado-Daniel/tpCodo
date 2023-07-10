@@ -1,4 +1,4 @@
-import {createCards, showCards, filterAll, productFilter, textFilter} from "./functions.js";
+import {createCards, showCards, productFilter, textFilter} from "./functions.js";
 import { actualizarNumerito } from "./details.js";
 const smartphones = document.getElementById('smart');
 const laptops = document.getElementById('laptops');
@@ -11,27 +11,26 @@ async function productData(){
     await fetch(urlProd)
         .then(response => response.json())
         .then(data => {
-            let cardsFilter = filterAll(data);
-            let cards = createCards(cardsFilter);
+            let catFilter;
+            let cards = createCards(data);
             showCards(cards);
             smartphones.addEventListener("click", function(){
-                cardsFilter = productFilter("smartphones", data);
-                cards = createCards(cardsFilter);
+                catFilter = productFilter("smartphones", data);
+                cards = createCards(catFilter);
                 showCards(cards);
             });
             laptops.addEventListener("click", function(){
-                cardsFilter = productFilter("laptops", data);
-                cards = createCards(cardsFilter);
+                catFilter = productFilter("laptops", data);
+                cards = createCards(catFilter);
                 showCards(cards);
             });
             all.addEventListener("click", function(){
-                cardsFilter = filterAll(data);
-                cards = createCards(cardsFilter);
+                cards = createCards(data);
                 showCards(cards);
             });
             console.log(cards);
             buttonInput.addEventListener('click', function(){//le da funcionalidad al boton de la barra de busqueda
-                textFilter(cardsFilter, textInput);//llama a la barra de busqueda para que efectue el filtro en base al nombre del producto
+                textFilter(data, textInput);//llama a la barra de busqueda para que efectue el filtro en base al nombre del producto
             });
         });
 }
