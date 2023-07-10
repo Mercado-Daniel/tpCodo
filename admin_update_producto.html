@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HighTechZone</title>
+    <link rel="shortcut icon" href="./assets/images/SoloLogoTP.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab&family=Khand:wght@300;500&family=PT+Sans+Narrow&family=Roboto+Condensed:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8495855060.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <nav class="nav1">
+            <div id="arriba" class="logo">
+                <a href="./index.html"><img class="logo1" src="./assets/images/LogoTP.png" alt="logo"></a>
+            </div>
+            <div class="user-nav">
+                
+            </div>              
+        </nav>
+        <nav class="nav2">
+            <div class="user-nav2">
+                <a href="./index.html" class="home"><i class="fa-solid fa-house fa-lg" style="color: #000000;"></i></a>
+                <a href="./products.html" class="productos">Productos</a>
+                <a href="./nosotros.html" class="nosotros">Nosotros</a>
+                <a href="./contacto.html" class="contacto">Contacto</a>
+            </div>
+        </nav>     
+       
+    </header>
+    <main class="loginRegister">
+        <div class="wrapper">
+            <span class="icon-close">
+                <i class="fa-solid fa-xmark" onclick="history.back()"></i>
+                <!-- <i class="fa-solid fa-xmark" v-on:click="clientes.html"></i> -->
+            </span>
+            <div class="form-box register" id="app">
+                <h2>Actualización de Producto</h2>
+                <form action="#" id="signupForm">
+                    <div class="input-box">
+                        <input type="text" id="name" v-model="id" required>
+                        <label>id</label>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" id="name" v-model="title" required>
+                        <label>Nombre</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="brand" required>
+                        <label>Marca</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="category" required>
+                        <label>Categoria</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="stock" required>
+                        <label>Stock</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="price" required>
+                        <label>Precio</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="description" required>
+                        <label>Descripcion</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="imagen1" required>
+                        <label>Imagen 1</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="imagen2" required>
+                        <label>Imagen 2</label>
+                    </div>
+                    <div class="input-box">                        
+                        <input type="text" id="name" v-model="imagen3" required>
+                        <label>Imagen 3</label>
+                    </div>
+                    <button type="button" class="btn" v-on:click="modificar()">Actualizar</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer1">
+            <a class="volver1" href="#arriba">Volver al inicio</a>            
+        </div>
+        <div id="footer2">
+            <a href="./assets/Políticas, Términos y Condiciones de la Tienda Virtual.pdf" target="_blank">Términos y Condiciones</a>    
+            <a href="./ayuda.html">Ayuda</a>                       
+        </div>
+        <div id="footer3">
+            <span>Redes Sociales</span>
+            <a href="https://www.facebook.com/" target="_blank"><img src="./assets/images/facebook.png" alt="facebook"></a>
+            <a href="https://www.instagram.com/" target="_blank"><img src="./assets/images/instagram.png" alt="instagram"></a>
+            <a href="https://twitter.com/" target="_blank"><img src="./assets/images/twitter.png" alt="twitter"></a>
+        </div>
+        <div id="footer4">
+            <p>Copyright © 2023, HighTechZone.com</p>
+            <p class="ultimo">Buenos Aires, Argentina</p>
+        </div>        
+    </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>    
+    <script src="./assets/js/admin_update_producto.js"></script>    
+</body>
+</html>
